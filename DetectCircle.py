@@ -22,7 +22,7 @@ if circles is not None:
     circles = np.round(circles[0, :]).astype("int")
     for (x, y, r) in circles:
         cv2.circle(image, (x, y), r, (0, 255, 0), 4)
-        cv2.circle(image, (x, y), 1, (0, 255, 0), -1)
+        cv2.circle(image, (x, y), 4, (0, 255, 0), -1)
 
 # save image
 cv2.imwrite('/Users/daijunyan/Desktop/WechatIMG366.jpg', image)
