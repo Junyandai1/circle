@@ -14,8 +14,8 @@ circles = cv2.HoughCircles(gray,
                            minDist=100, 
                            param1=100, 
                            param2=100, 
-                           minRadius=90, 
-                           maxRadius=250)
+                           minRadius=100, 
+                           maxRadius=600)
 
 # overlay circles on the original image
 if circles is not None:
