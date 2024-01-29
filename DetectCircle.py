@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # read image
-image = cv2.imread('/Users/daijunyan/Desktop/circlex.jpg')
+image = cv2.imread('/Users/daijunyan/Desktop/buttom.jpg')
 
 # convert to gray image
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -14,8 +14,8 @@ circles = cv2.HoughCircles(gray,
                            minDist=100,
                            param1=100,
                            param2=100,
-                           minRadius=100,
-                           maxRadius=700)
+                           minRadius=10,
+                           maxRadius=1000)
 
 # overlay circles on the original image
 if circles is not None:
@@ -25,4 +25,5 @@ if circles is not None:
     cv2.circle(image, (x, y), 4, (0, 255, 0), -1)
 
 # save image
-cv2.imwrite('/Users/daijunyan/Desktop/circlex1.jpg', image)
+cv2.imwrite('/Users/daijunyan/Desktop/buttom_circle.jpg', image)
+
